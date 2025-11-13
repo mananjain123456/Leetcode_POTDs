@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int maxOperations(string s) {
+        int n=s.size();
+        int count=0;
+        int opr=0;
+        int i=0;
+        while(i<n){
+            if(s[i]=='0'){
+                opr+=count;
+            while(i<n && s[i]=='0'){
+                i++;
+            }
+            }
+            else{
+                count++;
+                i++;
+            }
+        }
+        return opr;
+    }
+};
